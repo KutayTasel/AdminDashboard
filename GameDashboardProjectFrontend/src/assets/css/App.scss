@@ -1,0 +1,188 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "../../../node_modules/antd/dist/reset.css";
+
+body,
+html {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #000428,
+    #004e92,
+    #00b4db,
+    #8e44ad,
+    #c06c84
+  );
+  background-size: 400% 400%;
+  animation: gradientWave 15s ease infinite;
+  color: #333;
+}
+
+@keyframes gradientWave {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.custom-modal {
+  .ant-modal-content {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+    border: none;
+  }
+
+  .ant-modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .ant-modal-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0;
+  }
+
+  .ant-modal-body {
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .ant-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 15px;
+    border-top: 1px solid #f0f0f0;
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .ant-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 20px;
+
+    &.ant-btn-primary {
+      background-color: #667eea;
+      border-color: #667eea;
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        background-color: #5563c1;
+        border-color: #5563c1;
+      }
+    }
+
+    &.ant-btn-default {
+      background-color: #f0f0f0;
+      border-color: #d9d9d9;
+      color: #333;
+
+      &:hover,
+      &:focus {
+        background-color: #e6e6e6;
+        border-color: #d9d9d9;
+      }
+    }
+  }
+}
+
+.custom-form {
+  .ant-form-item-label > label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .ant-input,
+  .ant-select-selector {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    }
+  }
+
+  .ant-select-arrow {
+    color: #667eea;
+  }
+}
+
+@media (max-width: 640px) {
+  .custom-modal {
+    .ant-modal-body,
+    .ant-modal-footer {
+      padding: 15px;
+    }
+
+    .ant-modal-title {
+      font-size: 1.5rem;
+    }
+
+    .ant-btn {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .custom-modal {
+    .ant-modal-body,
+    .ant-modal-footer {
+      padding: 20px;
+    }
+
+    .ant-modal-title {
+      font-size: 1.6rem;
+    }
+
+    .ant-btn {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .custom-modal {
+    .ant-modal-body,
+    .ant-modal-footer {
+      padding: 25px;
+    }
+
+    .ant-modal-title {
+      font-size: 1.8rem;
+    }
+
+    .ant-btn {
+      font-size: 1.1rem;
+    }
+  }
+}

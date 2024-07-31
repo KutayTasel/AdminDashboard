@@ -1,0 +1,187 @@
+// @import "tailwindcss/base";
+// @import "tailwindcss/components";
+// @import "tailwindcss/utilities";
+// @import "../../../node_modules/antd/dist/reset.css";
+
+// body,
+// html {
+//   font-family: "Arial", sans-serif;
+//   margin: 0;
+//   padding: 0;
+//   min-height: 100vh;
+//   background: linear-gradient(
+//     135deg,
+//     #000428,
+//     #004e92,
+//     #00b4db,
+//     #8e44ad,
+//     #c06c84
+//   );
+//   background-size: 400% 400%;
+//   animation: gradientWave 15s ease infinite;
+//   color: #333;
+// }
+
+// @keyframes gradientWave {
+//   0%,
+//   100% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+// }
+
+// .unique-modal {
+//   .unique-modal-content {
+//     border-radius: 15px;
+//     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+//     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+//     border: none;
+//   }
+
+//   .unique-modal-header {
+//     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+//     color: white;
+//     border-top-left-radius: 15px;
+//     border-top-right-radius: 15px;
+//     padding: 20px;
+//     text-align: center;
+//   }
+
+//   .unique-modal-title {
+//     font-family: "Roboto", sans-serif;
+//     font-weight: 700;
+//     font-size: 1.8rem;
+//     color: #fff;
+//     margin: 0;
+//   }
+
+//   .unique-modal-body {
+//     padding: 20px;
+//     background-color: #ffffff;
+//     border-bottom-left-radius: 15px;
+//     border-bottom-right-radius: 15px;
+//   }
+
+//   .unique-modal-footer {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 15px 20px;
+//     border-top: none;
+//     background-color: #f5f5f5;
+//     border-bottom-left-radius: 15px;
+//     border-bottom-right-radius: 15px;
+//   }
+
+//   .unique-btn {
+//     border-radius: 8px;
+//     font-weight: 600;
+//     padding: 8px 20px;
+
+//     &.unique-btn-primary {
+//       background-color: #667eea;
+//       border-color: #667eea;
+//       font-family: "Roboto", sans-serif;
+//       color: #fff;
+
+//       &:hover,
+//       &:focus {
+//         background-color: #5563c1;
+//         border-color: #5563c1;
+//       }
+//     }
+
+//     &.unique-btn-default {
+//       background-color: #f0f0f0;
+//       border-color: #d9d9d9;
+//       color: #333;
+
+//       &:hover,
+//       &:focus {
+//         background-color: #e6e6e6;
+//         border-color: #d9d9d9;
+//       }
+//     }
+//   }
+// }
+
+// .unique-form {
+//   .unique-form-item-label > label {
+//     font-family: "Roboto", sans-serif;
+//     font-weight: 600;
+//     font-size: 1rem;
+//     color: #333;
+//   }
+
+//   .unique-input,
+//   .unique-select-selector {
+//     font-family: "Roboto", sans-serif;
+//     font-size: 1rem;
+//     border-radius: 8px;
+//     padding: 10px;
+//     background: rgba(255, 255, 255, 0.9);
+//     border: 1px solid rgba(200, 200, 200, 0.5);
+//     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+//     &:focus {
+//       border-color: #667eea;
+//       box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+//     }
+//   }
+
+//   .unique-select-arrow {
+//     color: #667eea;
+//   }
+// }
+
+// @media (max-width: 640px) {
+//   .unique-modal {
+//     .unique-modal-body,
+//     .unique-modal-footer {
+//       padding: 15px;
+//     }
+
+//     .unique-modal-title {
+//       font-size: 1.5rem;
+//     }
+
+//     .unique-btn {
+//       font-size: 0.875rem;
+//     }
+//   }
+// }
+
+// @media (min-width: 641px) and (max-width: 1024px) {
+//   .unique-modal {
+//     .unique-modal-body,
+//     .unique-modal-footer {
+//       padding: 20px;
+//     }
+
+//     .unique-modal-title {
+//       font-size: 1.6rem;
+//     }
+
+//     .unique-btn {
+//       font-size: 1rem;
+//     }
+//   }
+// }
+
+// @media (min-width: 1025px) {
+//   .unique-modal {
+//     .unique-modal-body,
+//     .unique-modal-footer {
+//       padding: 25px;
+//     }
+
+//     .unique-modal-title {
+//       font-size: 1.8rem;
+//     }
+
+//     .unique-btn {
+//       font-size: 1.1rem;
+//     }
+//   }
+// }
