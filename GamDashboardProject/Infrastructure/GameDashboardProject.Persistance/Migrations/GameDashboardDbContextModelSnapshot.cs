@@ -24,14 +24,13 @@ namespace GameDashboardProject.Persistance.Migrations
 
             modelBuilder.Entity("GameDashboardProject.Domain.Buildings.Building", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<decimal>("BuildingCost")
                         .HasColumnType("decimal(65,30)");
 
-                    b.Property<string>("BuildingTypeName")
+                    b.Property<string>("BuildingTypeId")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -44,11 +43,18 @@ namespace GameDashboardProject.Persistance.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<string>("IdString")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 

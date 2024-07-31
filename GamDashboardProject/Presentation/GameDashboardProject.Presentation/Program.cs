@@ -35,15 +35,16 @@ builder.Services.AddAuthorization(cfg =>
     cfg.AddPolicy("AdminRole", policyBuilder => policyBuilder.RequireRole("Admin"));
 });
 
-builder.Services.AddCors(opt =>
-{
-    opt.AddPolicy("Allow", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyMethod()
-              .AllowAnyHeader();
-    });
-});
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowSpecificOrigin",
+//        builder =>
+//        {
+//            builder.WithOrigins("https://gameadminpanel.azurewebsites.net")
+//                   .AllowAnyHeader()
+//                   .AllowAnyMethod();
+//        });
+//});
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -95,7 +96,7 @@ app.UseSwaggerUI(c =>
 });
 
 app.UseHttpsRedirection();
-app.UseCors("Allow");
+app.UseCors(builder=>builder.WithOrigins("https://gameadminpanel.azurewebsites.net").AllowAnyHeader().AllowAnyMethod());
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();

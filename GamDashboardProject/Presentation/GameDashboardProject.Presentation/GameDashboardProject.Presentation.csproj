@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -20,6 +20,10 @@
     <ProjectReference Include="..\..\GameDashboardProject.AutoMapper\GameDashboardProject.Mapper.csproj" />
     <ProjectReference Include="..\..\Infrastructure\GameDashboardProject.Infrastructure\GameDashboardProject.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\GameDashboardProject.Persistance\GameDashboardProject.Persistance.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

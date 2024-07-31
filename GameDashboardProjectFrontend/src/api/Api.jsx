@@ -1,7 +1,9 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const api = axios.create({ baseURL: "https://localhost:7123/api/" });
+const api = axios.create({
+  baseURL: "https://gamedashboardproject.azurewebsites.net/api/",
+});
 
 const addTokenHeader = () => {
   const token = sessionStorage.getItem("token");

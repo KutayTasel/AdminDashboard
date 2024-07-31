@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Form, Button } from "antd";
 import { useNavigate, Link } from "react-router-dom";
 import InputField from "../components/common/InputField";
-import "../assets/css/Login.scss"; // CSS dosyasını import ediyoruz
+import "../assets/css/Login.scss";
 import Lottie from "react-lottie";
 import animationData from "../assets/animation/animation.json";
 import AuthValidations from "../validations/Validation";
@@ -17,7 +17,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Kar efekti için kar tanesi elemanlarını dinamik olarak oluşturma
     const snowflakes = document.createElement("div");
     snowflakes.classList.add("snowflakes");
     for (let i = 0; i < 50; i++) {

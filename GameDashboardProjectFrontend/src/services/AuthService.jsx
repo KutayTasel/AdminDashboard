@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const AuthService = {
   async LoginServiceAsync(data) {
     try {
-      console.log("Giriş isteği başlatılıyor:", data);
+      console.log("Starting login request:", data);
       const response = await ApiRequests.handleRequestPostAsync(
         "Auth/Login",
         data,
@@ -13,27 +13,27 @@ const AuthService = {
       );
 
       if (response.status === 200 && response.data.token) {
-        console.log("Giriş başarılı, alınan token:", response.data.token);
+        console.log("Login successful, received token:", response.data.token);
         return response;
       } else {
         const errorMessage =
-          response.data.message || "Geçersiz kullanıcı adı veya şifre.";
+          response.data.message || "Invalid username or password.";
         toast.error(errorMessage);
-        console.error("Giriş başarısız:", errorMessage);
+        console.error("Login failed:", errorMessage);
+        return { status: response.status, error: errorMessage };
       }
-      return response;
     } catch (error) {
       const errorMessage =
-        error.response?.data?.message || "Giriş sırasında bir hata oluştu.";
+        error.response?.data?.message || "An error occurred during login.";
       toast.error(errorMessage);
-      console.error("Giriş sırasında bir hata oluştu.", error);
-      throw error;
+      console.error("An error occurred during login:", error);
+      return { status: error.response?.status, error: errorMessage };
     }
   },
 
   async RegisterServiceAsync(data) {
     try {
-      console.log("Kayıt isteği başlatılıyor:", data);
+      console.log("Starting registration request:", data);
       const response = await ApiRequests.handleRequestPostAsync(
         "Auth/Register",
         data,
@@ -42,25 +42,27 @@ const AuthService = {
       );
 
       if (response.status === 201 && response.data.isSuccess) {
-        console.log("Kayıt başarılı:", response.data);
+        console.log("Registration successful:", response.data);
         return response;
       } else {
-        const errorMessage = response.data.message || "Kayıt başarısız.";
+        const errorMessage = response.data.message || "Registration failed.";
         toast.error(errorMessage);
-        console.error("Kayıt başarısız:", errorMessage);
+        console.error("Registration failed:", errorMessage);
+        return { status: response.status, error: errorMessage };
       }
-      return response;
     } catch (error) {
       const errorMessage =
-        error.response?.data?.message || "Kayıt sırasında bir hata oluştu.";
+        error.response?.data?.message ||
+        "An error occurred during registration.";
       toast.error(errorMessage);
-      console.error("Kayıt sırasında bir hata oluştu.", error);
-      throw error;
+      console.error("An error occurred during registration:", error);
+      return { status: error.response?.status, error: errorMessage };
     }
   },
 
   Logout() {
     sessionStorage.clear();
+    console.log("User logged out, session cleared.");
   },
 };
 
